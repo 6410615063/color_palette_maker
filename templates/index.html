@@ -23,6 +23,16 @@
             height: 100px;
             border-radius: 8px;
         }
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .hex-code {
+            font-family: monospace;
+            font-size: 14px;
+        }
         #color1 { background-color: #FF6B6B; }
         #color2 { background-color: #4ECDC4; }
         #color3 { background-color: #45B7D1; }
@@ -37,11 +47,26 @@
     </div>
 
     <div class="color-container">
-        <div id="color1" class="color-box"></div>
-        <div id="color2" class="color-box"></div>
-        <div id="color3" class="color-box"></div>
-        <div id="color4" class="color-box"></div>
-        <div id="color5" class="color-box"></div>
+        <div class="color-item">
+            <div id="color1" class="color-box"></div>
+            <div id="hex1" class="hex-code">#FF6B6B</div>
+        </div>
+        <div class="color-item">
+            <div id="color2" class="color-box"></div>
+            <div id="hex2" class="hex-code">#4ECDC4</div>
+        </div>
+        <div class="color-item">
+            <div id="color3" class="color-box"></div>
+            <div id="hex3" class="hex-code">#45B7D1</div>
+        </div>
+        <div class="color-item">
+            <div id="color4" class="color-box"></div>
+            <div id="hex4" class="hex-code">#96CEB4</div>
+        </div>
+        <div class="color-item">
+            <div id="color5" class="color-box"></div>
+            <div id="hex5" class="hex-code">#FFEEAD</div>
+        </div>
     </div>
 
     <script>
@@ -62,7 +87,10 @@
             // Generate and apply random colors to all divs
             for (let i = 1; i <= 5; i++) {
                 const colorBox = document.getElementById(`color${i}`);
-                colorBox.style.backgroundColor = generateRandomColor();
+                const hexDisplay = document.getElementById(`hex${i}`);
+                const newColor = generateRandomColor();
+                colorBox.style.backgroundColor = newColor;
+                hexDisplay.textContent = newColor;
             }
         }
     </script>
