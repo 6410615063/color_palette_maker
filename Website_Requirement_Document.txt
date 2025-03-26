@@ -1,0 +1,33 @@
+Idea
+    a website that generate a color pallete for the user
+
+Tech stack
+    language: python
+    framework: Flask
+    web hosting: ?
+
+Implementation Plan
+    you are to follow these instruction step by step
+    each step will contain a test which I will use to valida your implementation of the step
+    you will wait until I say so before implement the next step
+
+    1. Install required program for making a Flask webpage
+        - also make a webpage
+        test: I will try to locally host the project, then try to open the webpage
+    2. add a clickable button to the webpage
+        - the button should say "Generate Color Pallete"
+        - print "button pressed" everytime the button is pressed
+        test: I will press the button
+    3. create 5 divs, each having a difference color (not white)
+        test: I will look for the divs
+    4. make the button randomize the divs's color
+        test: I will press the button
+    5. display each divs's color's hex code below each divs
+        - the hex codes must update every time the button is pressed
+        test: I will press the button
+    6. display each divs's color's RGB values below each divs
+        - the RGB values must update every time the button is pressed
+        test: I will press the button
+    7. decorate the webpage
+        - name the webpage "Color Pallete Generator"
+        test: I will look at the webpage
